@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+int obj;
 class Student2
 {
 private:
@@ -13,6 +13,7 @@ public:
 
     Student2()
     {
+        cout << "\nConstructor " << ++obj << " called.";
         cout << "\nEnter name of Student: ";
         cin >> name;
         for (int i = 0; i < 3; i++)
@@ -25,12 +26,17 @@ public:
 
     Student2(double mrks[3])
     {
+        cout << "\nConstructor " << ++obj << "called.";
         cout << "\nEnter name of Student: ";
         cin >> name;
         for (int i = 0; i < 3; i++)
         {
             marks[i] = mrks[i];
         }
+    }
+    ~Student2()
+    {
+        cout << "Destructor " << obj-- << " called." << endl;
     }
 
 };
@@ -50,11 +56,8 @@ int main()
     double mr[] = {80, 90, 100};
     Student2 s1(mr);
     s1.display();
-
     cout << "\n------------------------------------------";
-
     Student2 s2;
     s2.display();
-
     return 0;
 }
