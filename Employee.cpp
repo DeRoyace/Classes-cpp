@@ -1,7 +1,7 @@
 #include <iostream>
 #include<string.h>
 using namespace std;
-
+int obj;
 class Employee
 {
 public:
@@ -11,16 +11,15 @@ public:
 
 public:
     void accept();
-    void highSal(float);
     int findEmploy(char*);
     void display();
     Employee()
     {
-        cout << "Constructor Invoked" << endl;
+        cout << "Constructor " << ++obj << " Invoked" << endl;
     }
     ~Employee()
     {
-        cout << "Destructor Invoked" << endl;
+        cout << "Destructor " << obj-- << " Invoked" << endl;
     }
 };
 
@@ -35,7 +34,7 @@ void Employee ::accept()
         cin >> id;
         cout << "Salary : Rs. ";
         cin >> salary;
-        cout << "-------------------------------------";
+        cout << "---------------------------------------------";
 }
 
 int Employee ::findEmploy(char *nm)
@@ -48,19 +47,6 @@ int Employee ::findEmploy(char *nm)
         else
             return 0;
 }
-
-// void Employee ::highSal(float high)
-// {
-//     for (int i = 1; i < n; i++)
-//     {
-//         high = salary;
-//         if(high < salary)
-//         {
-//             high = salary;
-//         }
-//     }
-//     cout << "\nHighest salary is : Rs. " << high << endl;
-// }
 
 void Employee ::display()
 {
@@ -80,9 +66,11 @@ int main(void)
         e[i].accept();
         
     }
+    cout << "\n\n>>>>>>>>>>>>>>>> LIST OF ALL EMPLOYEES WITH DETAILS <<<<<<<<<<<<<<<< \n";
     for (int i = 0; i < n; i++)
     {
         e[i].display();
+        cout << "\n********************************************************************";
     }
 
     int flag=0;
@@ -94,21 +82,31 @@ int main(void)
     for (i = 0; i < n; i++)
     {
         j=e[i].findEmploy(nam);
-        cout << j << endl;
         if(j == 1)
         {
             flag=1;
             break;
         }
     }
-
     if (flag==1)
     {
+        cout << "Employee name found!\n";
         e[i].display();
     }
     else
     {
         cout << "\nEmployee name Not found." << endl;
-    }    
+    }
+    cout << "\n********************************************************************";
+    //code to find highest salary :
+    float max=e[0].salary;
+    for (int i = 1; i < n; i++)
+    {
+        if(max < e[i].salary)
+        {
+            max = e[i].salary;
+        }
+    }
+    cout << "\nHighest salary is : Rs. " << max << "\n\n";
     return 0;
 }
