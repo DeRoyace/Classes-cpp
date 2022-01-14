@@ -1,15 +1,7 @@
-/**
- * @file friendfunc.cpp
- * @author Rohit,Rohit (you@domain.com)
- * @brief 
- * @version 0.1
- * @date 2022-01-14
- * 
- * @copyright Copyright (c) 2022
- * 
-Friend Class A friend class can access private and protected members of other class in which it is declared as friend. It is sometimes useful to allow a particular class to access private members of other class.
+/*
+Friend Class : A friend class can access private and protected members of other class in which it is declared as friend. It is sometimes useful to allow a particular class to access private members of other class.
 
-Friend Function Like friend class, a friend function can be given a special grant to access private and protected members. A friend function can be: 
+Friend Function : Like friend class, a friend function can be given a special grant to access private and protected members. A friend function can be: 
 a) A member of another class 
 b) A global function 
 
@@ -18,6 +10,8 @@ Following are some important points about friend functions and classes:
 2) Friendship is not mutual. If class A is a friend of B, then B doesn't become a friend of A automatically.
 3) Friendship is not inherited (See this for more details)
 4) The concept of friends is not there in Java.
+
+Source : https://www.geeksforgeeks.org/friend-class-function-cpp/
 */
 
 #include<iostream>
