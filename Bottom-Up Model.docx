@@ -1,0 +1,2 @@
+Bottom-Up Model is a system design approach where parts of the system are defined in details. Once these parts are designed and developed, then these parts or components are linked together to prepare a bigger component. This approach is repeated until the complete system is built.
+Advantage of Bottom-Up Model is in making decisions at very low level and to decide the re-usability of components.
