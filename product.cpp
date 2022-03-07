@@ -8,7 +8,7 @@ private:
     char name[100];
     long code;
     double price;
-    int stocks, newstk;
+    int stocks=0, newstk;
     int nitems;
 
 public:
@@ -21,7 +21,7 @@ public:
 void product::accept()
 {
     cout << "\nEnter product name: ";
-    gets(name);
+    cin >> name;
     cout << "Enter product code: ";
     cin >> code;
     cout << "Enter product price: Rs. ";
@@ -37,7 +37,7 @@ void product::display()
 
 void product::instock()
 {
-    stocks=0;
+    // stocks=0;
     cout << "Enter number of new stocks: ";
     cin >> newstk;
     stocks += newstk;

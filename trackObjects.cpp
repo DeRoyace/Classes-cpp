@@ -1,6 +1,6 @@
 /**
  * @file trackObjects.cpp
- * @author Rohit,Rohit (you@domain.com)
+ * @author Rohit,Rohit (deroyace93@yahoo.com)
  * @brief Program to keep a track of no. of objects created, destroyed and active in the program.
  * @version 0.1
  * @date 2021-12-28

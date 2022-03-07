@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-static int obj;
 
 class Area
 {
