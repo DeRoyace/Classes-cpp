@@ -3,7 +3,7 @@ A virtual function is a member function which is declared within a base class an
 
 Virtual functions ensure that the correct function is called for an object, regardless of the type of reference (or pointer) used for function call.
 
-They are mainly used to achieve Runtime polymorphism
+They are mainly used to achieve Runtime/ dynamic polymorphism
 Functions are declared with a virtual keyword in base class.
 The resolving of function call is done at runtime.
 
@@ -44,7 +44,7 @@ int main()
 {
     A *a; //pointer of base class
     B b;  //object of derived class
-    a = &b;
-    a->display(); //Late Binding occurs
+    a = &b; // a is refering to object of class B
+    a->display(); //Late Binding occurs; display() of class B is invoked.
     return 0;
 }
